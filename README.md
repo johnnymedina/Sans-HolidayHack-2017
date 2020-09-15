@@ -1,5 +1,5 @@
 # Sans-HolidayHack-2017
-Every year SANS introduces a new Holiday Hack Challenge that is free to participate in and usually includes relevant security vulnerabilities for the year. The 2017 year had roughly 9,000 participants in the Capture the Flag(CTF) and around 170 challeneges to complete. This is my repository write up of how I completed each challenge.
+Every year SANS introduces a new Holiday Hack Challenge that is free to participate in and usually includes relevant security vulnerabilities for the year. It  roughly 9,000 participants in the Capture the Flag(CTF) and around 170 challeneges to complete. This is my repository write up of how I completed each challenge.
 
 ## Scope:
 1. Authorized to only attack external system called Letters to Santa at l2s.northpolechristmastown.com
