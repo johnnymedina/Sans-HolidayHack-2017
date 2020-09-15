@@ -1,22 +1,22 @@
 # Sans-HolidayHack-2017
 Every year SANS introduces a new Holiday Hack Challenge that is free to participate in and usually includes relevant security vulnerabilities for the year. The 2017 year had roughly 9,000 participants in the Capture the Flag(CTF) and around 170 challeneges to complete. This is my repository write up of how I completed each challenge in 2017.
 
-Scope:
+##Scope:
 1. Authorized to only attack external system called Letters to Santa at l2s.northpolechristmastown.com
 2. Authorized to attack systems internal to 10.142.0.0/24 network that could be access through system above 
 
-Things to Unlock and Collect Along the Way:
+##Things to Unlock and Collect Along the Way:
 1.Command Line Terminal Challenges provide Snowball Tools, Hints, and Achievements
 2.Snowball Challenges provide Achievements and pages to the Great Book
 3.CTF Objectives also provide Great Book Pages
 
-Tools Needed:
+##Tools Needed:
 1.A testing system of your choice (most likely kali)
 2.A cloud server not behind a firewall
 3.Variety of penetration testing tools (Burp, nmap, proxychians, smblient, netcat, etc)
 4.Time to work on challenges during the busiest holidays of the year 
 
-Objectives:
+##Objectives:
 1) Visit the North Pole and Beyond at the Winter Wonder Landing Level to collect the first page of The Great Book using a giant snowball. 
 Submit Flag:
 What is the title of that page?
