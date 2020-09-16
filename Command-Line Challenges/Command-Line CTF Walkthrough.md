@@ -9,7 +9,7 @@ The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
 To solve just need to identify alertnative locations for 'find'.
-<p align="center"> 
+<p align="left"> 
 <img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="40%">
 </p>
 
@@ -20,7 +20,7 @@ Where is FIND?, What are known locations of FIND?
 3. found it at /run/elftalk/bin/elftalkd
 4. moved to directory and executed './elftalkd'
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="40%">
 </p>
 <br/>
@@ -29,7 +29,7 @@ Where is FIND?, What are known locations of FIND?
 The challenge in this terminal is that the service "kill" isnt avaiable and you have 
 to find an alternative way to stop a service
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/3-Terminalwinconceiveaable.png" width="50%">
 </p>
 
@@ -44,7 +44,7 @@ to find an alternative way to stop a service
 
 ## Terminal CandyCaneStriper
 Challenge was to execute a script without the execution permission bit set (+x)
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/4-Terminalcandycanestriper.png" width="50%">
 </p>
 
@@ -53,7 +53,7 @@ Challenge was to execute a script without the execution permission bit set (+x)
 3. /lib64/ld-linux-x86-64.so.2 /home/elf/CandyCaneStriper +x 
 
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/5-Terminalcandycanestriper-solved.png" width="50%">
 </p>
 <br/>
@@ -62,7 +62,7 @@ Challenge was to execute a script without the execution permission bit set (+x)
 Problem was to execute a program that was designed to only run on an ARM 
 architecture
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/6-Terminaltheressnowplacelikehome.png" width="50%">
 </p>
 
@@ -73,7 +73,7 @@ architecture
 found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using.html
 4. ran 'qemu-arm trainstartup'
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/7-Terminaltheressnowplacelikehome-solved.png" width="50%">
 </p>
 <br/>
@@ -82,7 +82,7 @@ found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using
 The main challenge with this terminal was around data parsing. Given a huge log of 
 HTTP requests, and picking out the most popular browser.
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/9-Terminalbumblesbounce.png" width="50%">
 </p>
 
@@ -90,7 +90,7 @@ HTTP requests, and picking out the most popular browser.
 1. cat access.log |grep GET | cut -d ' ' -f 12 | sort -n | uniq -c | sort -n
 2. from results several had a count of  '1', but keyword in question was least popular 'browser'
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/10-Terminalbumblesbounce-solved.png" width="50%">
 </p>
 <br/>
@@ -98,7 +98,7 @@ HTTP requests, and picking out the most popular browser.
 ## Terminal SugarPlum
 This challenege has data in a SQLite database and is just about crafting the correct SQL statement
 to retrieve the correct data
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/11-Terminal-Sugarplum.png" width="50%">
 </p>
 
@@ -114,14 +114,14 @@ to retrieve the correct data
 9. SELECT id, title FROM songs GROUP BY id;\
  Returned: 392| Stairway to Heaven
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/12-Terminalsugarplum-solved.png" width="50%">
 </p>
 <br/>
 
 ## Terminal Shiny
 Needed to repair Shinny's server access but dont have root privledges BUT do have sudo.\
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/13-Terminalshiny.png" width="50%">
 </p>
 
@@ -132,7 +132,7 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 5. cd /usr/local/bin
 6. ./inspect_da_box
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/14-Terminalshinny-solved.png" width="50%">
 </p>
 
@@ -142,7 +142,7 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 The challenge for OpenSale was to make the binary you are given always return the value 42
 when executed.
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/15-Terminalopensale.png" width="50%">
 </p>
 
@@ -160,7 +160,7 @@ https://pen-testing.sans.org/blog/2017/12/06/go-to-the-head-of-the-class-ld-prel
 LD_PRELOAD="$PWD/jm" ./isit42
 COMPLETED
 
-<p align="center"> 
+<p align="left"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/16-Terminalopenslae-solved.png" width="50%">
 </p>
 
