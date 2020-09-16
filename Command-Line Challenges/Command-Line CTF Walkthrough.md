@@ -3,10 +3,15 @@ The Terminal Command Line challenges are provide tools that could be used in the
 challenge and in hints to complete the main CTF challenges.
 
 <br/>
+
 ## Terminal Bushy Evergreen
 <p align="center"> 
 <img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%">
 </p>
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="50%">
+</p>
+
 The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
@@ -18,9 +23,7 @@ Where is FIND?, What are known locations of FIND?
 3. found it at /run/elftalk/bin/elftalkd
 4. moved to directory and executed './elftalkd'
 
-<p align="center"> 
-<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="50%">
-</p>
+
 <br/>
 
 ## Terminal Winconceiveable
