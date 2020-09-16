@@ -3,7 +3,9 @@ The Terminal Command Line challenges are provide tools that could be used in the
 challenge and in hints to complete the main CTF challenges.
 
 ## Terminal Bushy Evergreen
-<p align="center"> <img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%"></p>\
+<p align="center"> 
+<img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%">
+</p>
 The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
@@ -15,10 +17,14 @@ Where is FIND?, What are known locations of FIND?
 3. found it at /run/elftalk/bin/elftalkd
 4. moved to directory and executed './elftalkd'
 
-![Bushy Solved](/Images/2-Terminalbushyeverygreen-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="50%">
+</p>
 
 ## Terminal Winconceiveable
-![Winconcievable](/Images/3-Terminalwinconceiveaable.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/3-Terminalwinconceiveaable.png" width="50%">
+</p>
 The challenge in this terminal is that the service "kill" isnt avaiable and you have 
 to find an alternative way to stop a service
 
@@ -32,17 +38,24 @@ to find an alternative way to stop a service
 
 
 ## Terminal CandyCaneStriper
-![Candycane](/Images/4-Terminalcandycanestriper.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/4-Terminalcandycanestriper.png" width="50%">
+</p>
 Challenge was to execute a script without the execution permission bit set (+x)
 1. ls -ll
 2. file CandyCaneStriper
 3. /lib64/ld-linux-x86-64.so.2 /home/elf/CandyCaneStriper +x 
 
 
-![Candysolved](/Images/5-Terminalcandycanestriper-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/5-Terminalcandycanestriper-solved.png" width="50%">
+</p>
 
 ## Terminal TheresSnowPlaceLikeHome
-![Theres](/Images/6-Terminaltheressnowplacelikehome.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/6-Terminaltheressnowplacelikehome.png" width="50%">
+</p>
+
 Problem was to execute a program that was designed to only run on an ARM 
 architecture
 1. file trainstartup
@@ -51,22 +64,35 @@ architecture
 found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using.html
 4. ran 'qemu-arm trainstartup'
 
-![Theres-solved](/Images/7-Terminaltheressnowplacelikehome-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/7-Terminaltheressnowplacelikehome-solved.png" width="50%">
+</p>
 
 ## Terminal BumblesBounce
-![Bumblebounce](/Images/8-Terminalbumblesbounce.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/8-Terminalbumblesbounce.png" width="50%">
+</p>
+
 The main challenge with this terminal was around data parsing. Given a huge log of 
 HTTP requests, and picking out the most popular browser.
 
-![Bumblebounce-info](/Images/9-Terminalbumblesbounce.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/9-Terminalbumblesbounce.png" width="50%">
+</p>
+
 
 1. cat access.log |grep GET | cut -d ' ' -f 12 | sort -n | uniq -c | sort -n
 2. from results several had a count of  '1', but keyword in question was least popular 'browser'
 
-![Bumblebounce-solved](/Images/10-Terminalbumblesbounce-solved.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/10-Terminalbumblesbounce-solved.png" width="50%">
+</p>
 
 ## Terminal SugarPlum
-![Sugarplum](/Images/11-Terminal-Sugarplum.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/11-Terminal-Sugarplum.png" width="50%">
+</p>
+
 This challenege has data in a SQLite database and is just about crafting the correct SQL statement
 to retrieve the correct data
 
@@ -82,9 +108,15 @@ to retrieve the correct data
 9. SELECT id, title FROM songs GROUP BY id;\
  Returned: 392| Stairway to Heaven
 
-![Sugarplum-solved](/Images/12-Terminalsugarplum-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/12-Terminalsugarplum-solved.png" width="50%">
+</p>
+
 ## Terminal Shiny
-![Shiny](/Images/13-Terminalshiny.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/13-Terminalshiny.png" width="50%">
+</p>
+
 Needed to repair Shinny's server access but dont have root privledges BUT do have sudo.\
 1. sudo -ll
 2. sudo -g shadow find /*/shadow.bak
@@ -93,10 +125,16 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 5. cd /usr/local/bin
 6. ./inspect_da_box
 
-![Shiny-solved](/Images/14-Terminalshinny-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/14-Terminalshinny-solved.png" width="50%">
+</p>
+
 
 ## Terminal OpenSale
-![Opensale](/Images/15-Terminalopensale.png)\
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/15-Terminalopensale.png" width="50%">
+</p>
+
 The challenge for OpenSale was to make the binary you are given always return the value 42
 when executed.\
 
@@ -114,5 +152,7 @@ https://pen-testing.sans.org/blog/2017/12/06/go-to-the-head-of-the-class-ld-prel
 LD_PRELOAD="$PWD/jm" ./isit42
 COMPLETED
 
-![Opensale-solved](/Images/16-Terminalopenslae-solved.png)
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/16-Terminalopenslae-solved.png" width="50%">
+</p>
 
