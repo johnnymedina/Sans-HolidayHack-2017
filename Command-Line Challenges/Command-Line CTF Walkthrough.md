@@ -3,7 +3,7 @@ The Terminal Command Line challenges are provide tools that could be used in the
 challenge and in hints to complete the main CTF challenges.
 
 ## Terminal Bushy Evergreen
-<img align="center" src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%">\
+<p align="center"> <img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%"></p>\
 The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
