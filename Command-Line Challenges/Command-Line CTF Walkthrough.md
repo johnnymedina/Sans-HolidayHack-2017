@@ -5,17 +5,14 @@ challenge and in hints to complete the main CTF challenges.
 <br/>
 
 ## Terminal Bushy Evergreen
-<p align="center"> 
-<img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="40%">
-</p>
-<p align="center"> 
-<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="40%">
-</p>
-
 The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
 To solve just need to identify alertnative locations for 'find'.
+<p align="center"> 
+<img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="40%">
+</p>
+
 
 Where is FIND?, What are known locations of FIND?
 1. find/usr/bin/find /usr/local/bin/find /usr/share/man/man1/find.1.gz /usr/share/info/find.info.gz
@@ -23,15 +20,18 @@ Where is FIND?, What are known locations of FIND?
 3. found it at /run/elftalk/bin/elftalkd
 4. moved to directory and executed './elftalkd'
 
-
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="40%">
+</p>
 <br/>
 
 ## Terminal Winconceiveable
+The challenge in this terminal is that the service "kill" isnt avaiable and you have 
+to find an alternative way to stop a service
+
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/3-Terminalwinconceiveaable.png" width="50%">
 </p>
-The challenge in this terminal is that the service "kill" isnt avaiable and you have 
-to find an alternative way to stop a service
 
 1. ps aux, kill 4224 but didnt work
 2. typed 'alias'
@@ -43,10 +43,10 @@ to find an alternative way to stop a service
 <br/>
 
 ## Terminal CandyCaneStriper
+Challenge was to execute a script without the execution permission bit set (+x)
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/4-Terminalcandycanestriper.png" width="50%">
 </p>
-Challenge was to execute a script without the execution permission bit set (+x)
 
 1. ls -ll
 2. file CandyCaneStriper
@@ -59,12 +59,14 @@ Challenge was to execute a script without the execution permission bit set (+x)
 <br/>
 
 ## Terminal TheresSnowPlaceLikeHome
+Problem was to execute a program that was designed to only run on an ARM 
+architecture
+
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/6-Terminaltheressnowplacelikehome.png" width="50%">
 </p>
 
-Problem was to execute a program that was designed to only run on an ARM 
-architecture
+
 1. file trainstartup
 2. uname -a
 3. quick google 'how to run arm on x64system' led to 
@@ -77,10 +79,6 @@ found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using
 <br/>
 
 ## Terminal BumblesBounce
-<p align="center"> 
-<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/8-Terminalbumblesbounce.png" width="50%">
-</p>
-
 The main challenge with this terminal was around data parsing. Given a huge log of 
 HTTP requests, and picking out the most popular browser.
 
@@ -98,12 +96,11 @@ HTTP requests, and picking out the most popular browser.
 <br/>
 
 ## Terminal SugarPlum
+This challenege has data in a SQLite database and is just about crafting the correct SQL statement
+to retrieve the correct data
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/11-Terminal-Sugarplum.png" width="50%">
 </p>
-
-This challenege has data in a SQLite database and is just about crafting the correct SQL statement
-to retrieve the correct data
 
 1. Found sqlite3 running
 2. .tables and found 2 tables likes, songs
@@ -123,11 +120,11 @@ to retrieve the correct data
 <br/>
 
 ## Terminal Shiny
+Needed to repair Shinny's server access but dont have root privledges BUT do have sudo.\
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/13-Terminalshiny.png" width="50%">
 </p>
 
-Needed to repair Shinny's server access but dont have root privledges BUT do have sudo.\
 1. sudo -ll
 2. sudo -g shadow find /*/shadow.bak
 3. man find and found it can execute a command with -exec
@@ -142,12 +139,12 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 <br/>
 
 ## Terminal OpenSale
+The challenge for OpenSale was to make the binary you are given always return the value 42
+when executed.
+
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/15-Terminalopensale.png" width="50%">
 </p>
-
-The challenge for OpenSale was to make the binary you are given always return the value 42
-when executed.\
 
 1. cat isit42.c.un
 2. found this reference
