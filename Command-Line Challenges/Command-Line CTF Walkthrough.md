@@ -2,9 +2,9 @@
 The Terminal Command Line challenges are provide tools that could be used in the snowball 
 challenge and in hints to complete the main CTF challenges.
 
-##Terminal Bushy Evergreen
-![BushyEvergreen](/Images/1-Terminalbushyevergreen.png)\
-The challenge is to locat ethe 'elftalkd' binary and execute it on the system
+## Terminal Bushy Evergreen
+![BushyEvergreen](/Images/1-Terminalbushyevergreen.png){:height="50% width="50%"}
+The challenge is to locate the 'elftalkd' binary and execute it on the system
 without having 'Find' and 'Locate' avaiable to you. \
 
 To solve just need to identify alertnative locations for 'find'.
@@ -17,7 +17,7 @@ Where is FIND?, What are known locations of FIND?
 
 ![Bushy Solved](/Images/2-Terminalbushyeverygreen-solved.png)
 
-##Terminal Winconceiveable
+## Terminal Winconceiveable
 ![Winconcievable](/Images/3-Terminalwinconceiveaable.png)\
 The challenge in this terminal is that the service "kill" isnt avaiable and you have 
 to find an alternative way to stop a service
@@ -31,7 +31,7 @@ to find an alternative way to stop a service
 7. ps aux showed process had been killed
 
 
-##Terminal CandyCaneStriper
+## Terminal CandyCaneStriper
 ![Candycane](/Images/4-Terminalcandycanestriper.png)\
 Challenge was to execute a script without the execution permission bit set (+x)
 1. ls -ll
@@ -41,7 +41,7 @@ Challenge was to execute a script without the execution permission bit set (+x)
 
 ![Candysolved](/Images/5-Terminalcandycanestriper-solved.png)
 
-##Terminal TheresSnowPlaceLikeHome
+## Terminal TheresSnowPlaceLikeHome
 ![Theres](/Images/6-Terminaltheressnowplacelikehome.png)\
 Problem was to execute a program that was designed to only run on an ARM 
 architecture
@@ -53,19 +53,19 @@ found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using
 
 ![Theres-solved](/Images/7-Terminaltheressnowplacelikehome-solved.png)
 
-##Terminal BumblesBounce
+## Terminal BumblesBounce
 ![Bumblebounce](/Images/8-Terminalbumblesbounce.png)\
 The main challenge with this terminal was around data parsing. Given a huge log of 
 HTTP requests, and picking out the most popular browser.
 
-![Bumblebounce-info](/Images/9-Terminalbumblesbounce.png)
+![Bumblebounce-info](/Images/9-Terminalbumblesbounce.png)\
 
 1. cat access.log |grep GET | cut -d ' ' -f 12 | sort -n | uniq -c | sort -n
 2. from results several had a count of  '1', but keyword in question was least popular 'browser'
 
-![Bumblebounce-solved](/Images/10-Terminalbumblesbounce-solved.png)
+![Bumblebounce-solved](/Images/10-Terminalbumblesbounce-solved.png)\
 
-##Terminal SugarPlum
+## Terminal SugarPlum
 ![Sugarplum](/Images/11-Terminal-Sugarplum.png)\
 This challenege has data in a SQLite database and is just about crafting the correct SQL statement
 to retrieve the correct data
@@ -83,7 +83,7 @@ to retrieve the correct data
  Returned: 392| Stairway to Heaven
 
 ![Sugarplum-solved](/Images/12-Terminalsugarplum-solved.png)
-##Terminal Shiny
+## Terminal Shiny
 ![Shiny](/Images/13-Terminalshiny.png)\
 Needed to repair Shinny's server access but dont have root privledges BUT do have sudo.\
 1. sudo -ll
@@ -95,7 +95,7 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 
 ![Shiny-solved](/Images/14-Terminalshinny-solved.png)
 
-##Terminal OpenSale
+## Terminal OpenSale
 ![Opensale](/Images/15-Terminalopensale.png)\
 The challenge for OpenSale was to make the binary you are given always return the value 42
 when executed.\
