@@ -2,6 +2,7 @@
 The Terminal Command Line challenges are provide tools that could be used in the snowball 
 challenge and in hints to complete the main CTF challenges.
 
+<br/>
 ## Terminal Bushy Evergreen
 <p align="center"> 
 <img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%">
@@ -20,6 +21,7 @@ Where is FIND?, What are known locations of FIND?
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="50%">
 </p>
+<br/>
 
 ## Terminal Winconceiveable
 <p align="center"> 
@@ -35,13 +37,14 @@ to find an alternative way to stop a service
 5. used 'unalis kill'
 6. then 'kill 8'
 7. ps aux showed process had been killed
-
+<br/>
 
 ## Terminal CandyCaneStriper
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/4-Terminalcandycanestriper.png" width="50%">
 </p>
 Challenge was to execute a script without the execution permission bit set (+x)
+
 1. ls -ll
 2. file CandyCaneStriper
 3. /lib64/ld-linux-x86-64.so.2 /home/elf/CandyCaneStriper +x 
@@ -50,6 +53,7 @@ Challenge was to execute a script without the execution permission bit set (+x)
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/5-Terminalcandycanestriper-solved.png" width="50%">
 </p>
+<br/>
 
 ## Terminal TheresSnowPlaceLikeHome
 <p align="center"> 
@@ -67,6 +71,7 @@ found http://tuxthink.blogspot.com/2012/04/executing-arm-executable-in-x86-using
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/7-Terminaltheressnowplacelikehome-solved.png" width="50%">
 </p>
+<br/>
 
 ## Terminal BumblesBounce
 <p align="center"> 
@@ -87,6 +92,7 @@ HTTP requests, and picking out the most popular browser.
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/10-Terminalbumblesbounce-solved.png" width="50%">
 </p>
+<br/>
 
 ## Terminal SugarPlum
 <p align="center"> 
@@ -111,6 +117,7 @@ to retrieve the correct data
 <p align="center"> 
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/12-Terminalsugarplum-solved.png" width="50%">
 </p>
+<br/>
 
 ## Terminal Shiny
 <p align="center"> 
@@ -129,6 +136,7 @@ Needed to repair Shinny's server access but dont have root privledges BUT do hav
 <img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/14-Terminalshinny-solved.png" width="50%">
 </p>
 
+<br/>
 
 ## Terminal OpenSale
 <p align="center"> 
