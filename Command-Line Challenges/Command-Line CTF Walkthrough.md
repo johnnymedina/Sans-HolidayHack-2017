@@ -5,11 +5,11 @@ challenge and in hints to complete the main CTF challenges.
 <br/>
 
 ## Terminal Bushy Evergreen
-<p align="left"> 
-<img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="50%">
+<p align="center"> 
+<img src="https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/1-Terminalbushyevergreen.png" width="40%">
 </p>
-<p align="right"> 
-<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="50%">
+<p align="center"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/2-Terminalbushyeverygreen-solved.png" width="40%">
 </p>
 
 The challenge is to locate the 'elftalkd' binary and execute it on the system
