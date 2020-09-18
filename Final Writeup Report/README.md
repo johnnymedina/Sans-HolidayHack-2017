@@ -1,23 +1,25 @@
-#CTF Main Challenges
+# CTF Main Challenges
 This is a rough write of my notes while completing the challenge, he offical report is under Final Writeup section.
 
-##Challenge - 1 
+## Challenge - 1 
 Visit the North Pole and Beyond at the Winter Wonder Landing Level to collect the first page of The Great Book using a giant snowball. 
 What is the title of that page?
 
+#### To Solve:
 Solved in Terminal Challenge 1 
 My name is Bushy Evergreen, and I have a problem for you.I think a server got owned, and I can only offer a clue.We use the system for chat, to keep toy production running.Can you help us recover from the server connection shunning?
 
 Find and run the elftalkd binary to complete this challenge.
 
 
-##Challenge - 2 Apache Struts
+## Challenge - 2 Apache Struts
 Investigate the Letters to Santa application at  https://l2s.northpolechristmastown.com.
 What is the topic of The Great Book page available in the web root of the server
 On the Topic of Flying Animals
 
 What is Alabaster Snowball's password?
 
+#### To Solve:
 ```stream_unhappy_buy_loss```
 
 In Source Code of https://l2s.northpolechristmastown.com, found link to :
@@ -61,7 +63,7 @@ Tried the creds and logged into SSH:
 
 confirmed password with successful login!
 
-##Challenge 3 -SMB
+## Challenge 3 -SMB
 
 The North Pole engineering team uses a Windows SMB server for sharing documentation and correspondence. 
 Using your access to the Letters to Santa server, identify and enumerate the SMB file-sharing server. 
@@ -72,6 +74,7 @@ FileStor
 
 For hints, please see Holly Evergreen in the Cryokinetic Magic Level.
 
+#### To Solve:
 
 From ec2 instance and tunneling through Letters to Santa :
 
@@ -107,13 +110,15 @@ FileShare name is FileStor
 
 From there was able to get GreatBookPage3.pdf
 
-##Challenge 4 - Mail Cookie
+## Challenge 4 - Mail Cookie
 Elf Web Access (EWA) is the preferred mailer for North Pole elves, available internally at http://mail.northpolechristmastown.com. 
 What can you learn from The Great Book page found in an e-mail on that server?
 Find a NPC conversation with Bumble and SAM. Abominable Snow Monster is throwing snowballs.
 Rise of the Lollipop Guild – Group of spys working to undermine Elves
 
 Pepper Minstix provides some hints for this challenge on the There's Snow Place Like Home Level.
+
+#### To Solve:
 
 From EC2 Kali Instance:
 ```ssh -C -D 1080 alabaster_snowball@35.227.95.239```
@@ -154,7 +159,7 @@ Found email with Greatbook page from holly Everygreen
 f192a884f68af24ae55d9d9ad4adf8d3a3995258  
 ```
 
-##Challenge 5 - JSON
+## Challenge 5 - JSON
 How many infractions are required to be marked as naughty on Santa's Naughty and Nice List? 
 4 infractions
 
@@ -165,7 +170,7 @@ Nina, Bini, Sheri, Wesley, Kristy, Boq
 Who is throwing the snowballs from the top of the North Pole Mountain and what is your proof?
 Infractions for rock throwing were Bini and Boq
 
-To Solve:
+#### To Solve:
 
 Go to website https://nppd.northpolechristmastown.com/infractions?query=name%3A*
 
@@ -179,7 +184,7 @@ naughty and nice list.csv
 Looked at BOLO-MunchkinMoleReport.docx taken from smb server and see that all moles were charged with 'aggravated hair pulling' and search for term 'hair pulling' in list of names taken from NPPD site
 
 
-##Challenge 6 - XXE
+## Challenge 6 - XXE
 6The North Pole engineering team has introduced an Elf as a Service (EaaS) platform to optimize resource allocation for mission-critical Christmas engineering projects at http://eaas.northpolechristmastown.com. 
 Visit the system and retrieve instructions for accessing The Great Book page from C:\greatbook.txt. 
 
@@ -188,7 +193,7 @@ What is the title of The Great Book page?
 
 The Dreaded Inter-Dimensional Tornadoes
 
-To Solve:
+#### To Solve:
 ```
 ssh -C -D 1080 alabaster_snowball@35.196.147.148
 proxychains firefox
@@ -222,7 +227,7 @@ Visit the website at http://eaas.northpolechristmastown.com/xMk7H1NypzAqYoKw/gre
 
 Download the Greatbook6.pdf 
 
-##Challenge 7 - Phishin
+## Challenge 7 - Phishin
 Like any other complex SCADA systems, the North Pole uses Elf-Machine Interfaces (EMI) to monitor and control critical infrastructure assets. These systems serve many uses, including email access and web browsing. 
 
 Gain access to the EMI server through the use of a phishing attack with your access to the EWA server. 
@@ -232,7 +237,7 @@ What does The Great Book page describe?
 Regarding the Witches of Oz
 
 
-To Solve:
+#### To Solve:
 ```
 SSH -C -D 1080 alabaster_snowball@35.196.147.148
 ```
