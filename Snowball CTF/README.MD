@@ -2,7 +2,7 @@
 Snowball Challenges unlock achievements , pages of the Great Book, and tools for future Snowball Challenges
 There were 8 total challenges on the map to complete.
 
-#### Problem : 
+#### Problem: 
 They are time consuming, complicated, and a pain.
 
 #### Solution:
